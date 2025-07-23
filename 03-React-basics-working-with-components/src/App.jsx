@@ -1,19 +1,40 @@
-import { CORE_CONCEPTS } from "./data";
+import { useState } from "react";
+
+import { CORE_CONCEPTS, EXAMPLES } from "./data";
 import Header from "./components/Header/Header.jsx";
 import CoreConcept from "./components/CoreConcept.jsx";
 import TabButton from "./components/TabButton.jsx";
 
 function App() {
-  let tabContent = "Please click a button!";
+  // let tabContent = "Please click a button!";
+
+  // const [selectedTopic, setSelectedTopic] = useState("components");
+  const [selectedTopic, setSelectedTopic] = useState();
 
   function handleSelect(selectedButton) {
     // selectedButton => "Components", 'jsx', ....
     // console.log(selectedButton);
-    tabContent = selectedButton;
-    console.log(tabContent)
+    // tabContent = selectedButton;
+    setSelectedTopic(selectedButton);
+    // console.log(selectedTopic);
   }
 
-  console.log("APP COMPONENT EXECUTING'")
+  console.log("APP COMPONENT EXECUTING'");
+
+  let tabContent = <p>Please select a topic.</p>;
+
+  if (selectedTopic) {
+    tabContent = (
+      <div id="tab-content">
+        <h3>{EXAMPLES[selectedTopic].title}</h3>
+        <p>{EXAMPLES[selectedTopic].description}</p>
+        <pre>
+          <code>{EXAMPLES[selectedTopic].code}</code>
+        </pre>
+      </div>
+    );
+  }
+
   return (
     <div>
       <Header />
@@ -41,6 +62,19 @@ function App() {
             <TabButton onSelect={() => handleSelect("props")}>Props</TabButton>
             <TabButton onSelect={() => handleSelect("state")}>State</TabButton>
           </menu>
+          {/*
+  {!selectedTopic ? (
+    <p>Please select a topic.</p>
+  ) : (
+    <div id="tab-content">
+      <h3>{EXAMPLES[selectedTopic].title}</h3>
+      <p>{EXAMPLES[selectedTopic].description}</p>
+      <pre>
+        <code>{EXAMPLES[selectedTopic].code}</code>
+      </pre>
+    </div>ß
+  )}
+*/}
           {tabContent}
         </section>
         <h2>Time to get started!</h2>
