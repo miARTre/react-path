@@ -23,7 +23,7 @@ A simple React **Tic Tac Toe** game built with **Vite**, demonstrating React cor
 
 ## 🌐 Live Demo
 
-🔗 https://tic-tac-toe-eo4s.onrender.com
+🔗 https://tic-tac-toe-f4m0.onrender.com
 
 ---
 
