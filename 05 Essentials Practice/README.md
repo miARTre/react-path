@@ -2,6 +2,6 @@
 
 ## 🌐 Live Demo
 
-🔗 (https://practice-react-f618.onrender.com/)
+🔗 https://practice-react-f618.onrender.com/
 
 ---
