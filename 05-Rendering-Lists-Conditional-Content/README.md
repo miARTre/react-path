@@ -29,6 +29,7 @@ A simple React **Tic Tac Toe** game built with **Vite**, demonstrating React cor
 
 ## 📁 Project Structure
 
+```
 05-Rendering-Lists-Conditional-C/
 ├── src/
 │ ├── components/
@@ -44,7 +45,7 @@ A simple React **Tic Tac Toe** game built with **Vite**, demonstrating React cor
 ├── index.html
 ├── package.json
 ├── vite.config.js
-
+```
 ---
 
 ## 🛠️ Run Locally
